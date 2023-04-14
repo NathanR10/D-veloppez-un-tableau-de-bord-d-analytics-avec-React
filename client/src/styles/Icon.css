@@ -1,0 +1,10 @@
+.icon_frame {
+  width: 64px;
+  height: 64px;
+  border-radius: 6px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}

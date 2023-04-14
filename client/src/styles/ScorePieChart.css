@@ -1,0 +1,51 @@
+.ScorePieChart_frame {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.ScorePieChart_dailyFrame_title {
+  position: absolute;
+  transform: translate(32px, 24px);
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 24px;
+  color: #20253A;
+  z-index: 10;
+}
+
+.ScorePieChart_dailyFrame_desc {
+  position: absolute;
+  font-size: 16px;
+  font-weight: 500;
+  color: rgba(116, 121, 140, 1);
+  text-align: center;
+  line-height: 26px;
+}
+
+.ScorePieChart_dailyFrame_progress {
+  font-size: 26px;
+  font-weight: 700;
+  color: rgba(40, 45, 48, 1);
+}
+
+.ScorePieChart_bgFrame {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ScorePieChart_bg {
+  background-color: white;
+  height: 180px;
+  width: 180px;
+  border-radius: 50%;
+  margin-top: 20px;
+}

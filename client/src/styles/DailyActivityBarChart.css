@@ -1,0 +1,41 @@
+.dailyActivityBarChart_dailyFrame_title {
+  position: absolute;
+  transform: translate(32px, 24px);
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 24px;
+  color: #20253A;
+}
+
+.dailyActivityBarChart_dailyFrame_legend {
+  display: flex;
+  flex-direction: row-reverse;
+  margin: 0;
+  padding: 0;
+  gap: 0 32px;
+  transform: translateY(-76px);
+}
+
+.dailyActivityBarChart_dailyFrame_legend li {
+  display: flex;
+  gap: 0 12px;
+  color: rgba(116, 121, 140, 1);
+}
+
+.dailyActivityBarChart_dailyFrame_tooltip {
+  list-style-type: none;
+  background-color: #E60000;
+  padding: 0;
+  margin: 0 25px;
+  border: none;
+  transform: translateY(-50%);
+}
+
+.dailyActivityBarChart_dailyFrame_tooltip li {
+  padding: 20px 12px;
+  text-align: center;
+  color: white;
+  font-size: 10px;
+}

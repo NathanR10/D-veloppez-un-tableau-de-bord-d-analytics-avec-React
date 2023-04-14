@@ -1,0 +1,21 @@
+.header_nav {
+  background-color: #020203;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 87px 0 26px;
+  height: 91px;
+}
+
+.header_logo {
+  height: 61px;
+  width: 178px;
+}
+
+.header_navLink {
+  color: white;
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: 500;
+}

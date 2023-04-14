@@ -1,0 +1,5 @@
+.community_frame {
+  overflow-y: auto;
+  max-height: calc(100vh - 91px);
+  padding: 70px 90px 90px 110px;
+}

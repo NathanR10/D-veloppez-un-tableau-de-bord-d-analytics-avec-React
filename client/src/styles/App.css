@@ -1,0 +1,6 @@
+.mainFrame {
+  display: flex;
+  max-height: calc(100vh - 91px);
+}
+
+@media only screen and (max-width: 975px) {}

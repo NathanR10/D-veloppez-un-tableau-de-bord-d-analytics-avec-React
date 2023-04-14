@@ -1,0 +1,17 @@
+.footer_frame {
+  background-color: #020203;
+  width: 117px;
+  height: calc(100vh - 91px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer_copyright {
+  color: white;
+  font-size: 12px;
+  transform: rotateZ(-90deg) translateX(50%);
+  white-space: nowrap;
+  margin-bottom: 60px;
+}
