@@ -1,9 +1,21 @@
 import React from 'react'
 import { Pie, Cell, ResponsiveContainer, PieChart } from 'recharts'
 import '../styles/ScorePieChart.css'
+import PropTypes from 'prop-types'
+
+/**
+ * Component for showing a recharts graph of performances poles of user
+ * 
+ * @component
+ * @example
+ * const data = [{name: string, value: number(min: 0, max: 100)}]
+ * return (
+ *   <ScorePieChart data={data} />
+ * )
+ */
 
 export default function ScorePieChart ({ data }) {
-  const progress = data[0].value // allant de 0 a 100
+  const progress = data[0].value
   const startAngle = 210
   const endAngle = ((-30 - startAngle) / 100 * progress) + startAngle
   return (
@@ -34,3 +46,11 @@ export default function ScorePieChart ({ data }) {
     </>
   )
 }
+
+ScorePieChart.propTypes = {
+  data: PropTypes.arrayOf(
+    PropTypes.shape({
+      value: PropTypes.number.isRequired,
+    })
+  ).isRequired,
+};

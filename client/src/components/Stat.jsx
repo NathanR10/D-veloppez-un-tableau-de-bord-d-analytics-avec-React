@@ -1,5 +1,16 @@
 import React from 'react'
 import '../styles/Stat.css'
+import PropTypes from 'prop-types'
+
+/**
+ * Component for showing brut stat of user.
+ * 
+ * @component
+ * @example
+ * return (
+ *  <Stat icon={string} color={string} value={number} label={string} type={string} />
+ * )
+ */
 
 export default function Stat ({ icon, color, value, label, type }) {
   return (
@@ -15,3 +26,10 @@ export default function Stat ({ icon, color, value, label, type }) {
   )
 }
 
+Stat.propTypes = {
+  icon: PropTypes.string.isRequired,
+  color: PropTypes.string.isRequired,
+  value: PropTypes.string.isRequired,
+  label: PropTypes.string.isRequired,
+  type: PropTypes.string.isRequired,
+};

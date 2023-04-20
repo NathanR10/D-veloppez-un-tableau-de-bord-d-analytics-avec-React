@@ -1,14 +1,33 @@
 import React from 'react'
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Rectangle } from 'recharts'
 import '../styles/AverageSessionLineChart.css'
+import PropTypes from 'prop-types'
+
+/**
+ * Component for showing a recharts graph of average sessions length of user
+ * 
+ * @component
+ * @example
+ * const data = [{day: number, sessionLength: number}]
+ * return (
+ *   <AverageSessionLineChart data={data} />
+ * )
+ */
 
 export default function AverageSessionLineChart ({ data }) {
   const ContentBg = ({ points, width }) => {
     const [{ x }] = points
     return (
-      <Rectangle width={width} height={263} x={x} fill='#0000004D' style={{ transition: 'all .4s' }} />
+      <Rectangle width={width || 0} height={263} x={x || 0} fill='#0000004D' style={{ transition: 'all .4s' }} />
     )
   }
+
+  ContentBg.propTypes = {
+    points: PropTypes.arrayOf(PropTypes.shape({
+      x: PropTypes.number
+    })),
+    width: PropTypes.number
+  };
 
   return (
     <>
@@ -28,7 +47,7 @@ export default function AverageSessionLineChart ({ data }) {
             dataKey="day"
             tickLine={false}
             axisLine={false}
-            tickFormatter={(day, index) => (day.substring(0, 1))}
+            tickFormatter={(day) => (day.substring(0, 1))}
             dy={20}
             stroke='#ffffff80'
             interval="preserveStartEnd"
@@ -70,3 +89,11 @@ export default function AverageSessionLineChart ({ data }) {
     </>
   )
 }
+
+AverageSessionLineChart.propTypes = {
+  data: PropTypes.arrayOf(PropTypes.shape({
+    day: PropTypes.string.isRequired,
+    sessionLength: PropTypes.number.isRequired,
+  })).isRequired,
+  payload: PropTypes.array,
+};

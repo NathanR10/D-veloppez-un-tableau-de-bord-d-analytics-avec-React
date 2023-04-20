@@ -2,6 +2,17 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import '../styles/Header.css'
 
+/**
+ * Header component for the app.
+ * Contain all link to bind pages
+ * 
+ * @component
+ * @example
+ * return (
+ *  <Header />
+ * )
+ */
+
 export default function Header () {
   // TODO: si aucun ID -> choix entre les 2 users
   return (

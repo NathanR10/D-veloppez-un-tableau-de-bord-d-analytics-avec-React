@@ -1,3 +1,4 @@
+import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import Home from '../pages/Home'
 import Profile from '../pages/Profile'
@@ -9,6 +10,18 @@ import Footer from '../components/Footer'
 import Login from '../pages/Login'
 import '../styles/App.css'
 
+/**
+ * Main router component for the app.
+ * Responsible for handling routing using React Router.
+ * Renders different pages based on the current URL path.
+ * 
+ * @component
+ * @example
+ * return (
+ *  <AppRouter />
+ * )
+ */
+
 function AppRouter () {
   return (
     <Router>
@@ -16,7 +29,6 @@ function AppRouter () {
       <div className="mainFrame">
         <Footer />
         <Routes>
-          {/* TODO: page "/" -> home & page "stats/:id -> pageStats(home)"*/}
           <Route path="/" element={<Login />} />
           <Route path="/home/:id" element={<Home />} />
           <Route path="/profil/" element={<Profile />} />

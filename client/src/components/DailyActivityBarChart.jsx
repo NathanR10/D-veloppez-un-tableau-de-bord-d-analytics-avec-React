@@ -1,9 +1,20 @@
 import React from 'react'
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, Rectangle } from 'recharts'
 import '../styles/DailyActivityBarChart.css'
+import PropTypes from 'prop-types'
+
+/**
+ * Component for showing a recharts graph of daily user activity
+ * 
+ * @component
+ * @example
+ * const data = [{calories: number, day: number, kilogram: number}]
+ * return (
+ *   <DailyActivityBarChart data={data} />
+ * )
+ */
 
 export default function DailyActivityBarChart ({ data }) {
-
   const getDailyData = (data) => {
     let dailyData = { minCalories: Infinity, minKilograms: Infinity, maxCalories: -Infinity, maxKilograms: -Infinity }
     data.forEach(el => {
@@ -18,9 +29,14 @@ export default function DailyActivityBarChart ({ data }) {
   const ContentBg = ({ x }) => {
     return (
       // max height = 260px
-      <Rectangle width={56} height={143} x={x} y={117} fill='#c4c4c480' style={{ transform: 'translateX(-28px)', transition: 'all .4s' }} />
+      <Rectangle width={56} height={143} x={x || 0} y={117} fill='#c4c4c480' style={{ transform: 'translateX(-28px)', transition: 'all .4s' }} />
     )
   }
+
+  ContentBg.propTypes = {
+    x: PropTypes.number
+  };
+
   return (
     <>
       <span className='dailyActivityBarChart_dailyFrame_title'>Activité quotidienne</span>
@@ -86,3 +102,12 @@ export default function DailyActivityBarChart ({ data }) {
     </>
   )
 }
+
+DailyActivityBarChart.propTypes = {
+  data: PropTypes.arrayOf(PropTypes.shape({
+    day: PropTypes.number.isRequired,
+    calories: PropTypes.number.isRequired,
+    kilogram: PropTypes.number.isRequired,
+  })).isRequired,
+  payload: PropTypes.array,
+};

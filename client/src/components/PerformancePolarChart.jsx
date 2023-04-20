@@ -1,7 +1,18 @@
 import React from 'react'
-import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts'
-
+import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, ResponsiveContainer } from 'recharts'
 import '../styles/PerformancePolarChart.css'
+import PropTypes from 'prop-types'
+
+/**
+ * Component for showing a recharts graph of performances poles of user
+ * 
+ * @component
+ * @example
+ * const data = [{kind1: {A: number, subject: string}}, {kind2: {A: number, subject: string}}]
+ * return (
+ *   <PerformancePolarChart data={data} />
+ * )
+ */
 
 export default function PerformancePolarChart ({ data }) {
   const formatedData = [
@@ -23,3 +34,19 @@ export default function PerformancePolarChart ({ data }) {
     </ResponsiveContainer>
   )
 }
+
+const kindPropType = PropTypes.shape({
+  A: PropTypes.number.isRequired,
+  subject: PropTypes.string.isRequired
+});
+
+PerformancePolarChart.propTypes = {
+  data: PropTypes.shape({
+    kind1: kindPropType.isRequired,
+    kind2: kindPropType.isRequired,
+    kind3: kindPropType.isRequired,
+    kind4: kindPropType.isRequired,
+    kind5: kindPropType.isRequired,
+    kind6: kindPropType.isRequired,
+  }).isRequired,
+};
