@@ -20,8 +20,7 @@ export default function Home () {
   const [userActivityData, setUserActivityData] = useState()
   const [userAverageData, setUserAverageData] = useState()
   const [userPerformanceData, setUserPerformanceData] = useState()
-
-  const userScoreData = [{ name: 'Score', value: 100 }]
+  const [userScoreData, setUserScoreData] = useState()
   const { id } = useParams()
   const formatedId = parseInt(id)
 
@@ -32,6 +31,7 @@ export default function Home () {
       const userAverage = await services.getUserAverageSessions(formatedId);
       const userPerformance = await services.getUserPerformance(formatedId);
       setUserMainData(userMain)
+      setUserScoreData([{ name: 'Score', value: userMain.score }])
       setUserActivityData(userActivity.sessions)
       setUserAverageData(userAverage.sessions)
       setUserPerformanceData(userPerformance)

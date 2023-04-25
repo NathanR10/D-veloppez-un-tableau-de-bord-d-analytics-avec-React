@@ -8,10 +8,9 @@ import PropTypes from 'prop-types'
  * 
  * @component
  * @example
- * const data = [{day: number, sessionLength: number}]
- * return (
- *   <AverageSessionLineChart data={data} />
- * )
+ * @param {array} data - Session's data
+ * @param {number} data[].day - Session's day
+ * @param {number} data[].sessionLength - Session's length
  */
 
 export default function AverageSessionLineChart ({ data }) {

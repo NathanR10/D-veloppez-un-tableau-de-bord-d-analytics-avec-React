@@ -10,7 +10,7 @@ export default class UserMainData {
     this._firstName = data.userInfos.firstName;
     this._lastName = data.userInfos.lastName;
     this._age = data.userInfos.age;
-    this._todayScore = data.todayScore;
+    this._score = data.score;
     this._calorieCount = data.keyData.calorieCount;
     this._proteinCount = data.keyData.proteinCount;
     this._carbohydrateCount = data.keyData.carbohydrateCount;
@@ -53,8 +53,8 @@ export default class UserMainData {
    * Get the code value.
    * @return {number} The _code value
    */
-  get todayScore() {
-    return this._todayScore;
+  get score() {
+    return this._score * 100;
   }
   
   /**

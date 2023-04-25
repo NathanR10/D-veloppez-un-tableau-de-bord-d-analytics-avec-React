@@ -14,7 +14,6 @@ import '../styles/Header.css'
  */
 
 export default function Header () {
-  // TODO: si aucun ID -> choix entre les 2 users
   return (
     <nav className='header_nav'>
       <Link to="/">

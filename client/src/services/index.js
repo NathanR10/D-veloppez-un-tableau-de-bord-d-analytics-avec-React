@@ -10,7 +10,7 @@ const REACT_APP_API_MOCKING = process.env.REACT_APP_API_MOCKING === "true";
 // eslint-disable-next-line no-undef
 const REACT_APP_API_ROUTE = process.env.REACT_APP_API_ROUTE;
 
-/**
+/** TODO
  * collect data of targeted user, using userId
  * if REACT_APP_API_MOCKING is true, it return mocked data
  * else it return API server response
