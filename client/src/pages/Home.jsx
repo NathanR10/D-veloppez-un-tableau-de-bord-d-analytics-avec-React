@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import '../styles/Home.css'
+import { useNavigate } from 'react-router-dom'
 import Stat from '../components/Stat'
 import services from '../services'
 import formatNumber from '../services/utils'
@@ -16,6 +17,7 @@ import { useParams } from 'react-router-dom'
  */
 
 export default function Home () {
+  const navigate = useNavigate()
   const [userMainData, setUserMainData] = useState({
     firstName: '...',
     calorieCount: 0,
@@ -33,6 +35,10 @@ export default function Home () {
   useEffect(() => {
     const fetchData = async () => {
       const userMain = await services.getUserMainData(formatedId)
+      if (!userMain) {
+        // Redirect user at home if id is invalid
+        return navigate('/')
+      }
       const userActivity = await services.getUserActivity(formatedId);
       const userAverage = await services.getUserAverageSessions(formatedId);
       const userPerformance = await services.getUserPerformance(formatedId);
