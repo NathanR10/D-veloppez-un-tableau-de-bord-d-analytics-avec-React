@@ -1,9 +1,17 @@
-/**
- * class UserMainData - data modeling
- */
 export default class UserMainData {
   /**
-   * @param {object} data - The data value.
+   * Class representing user main data
+   * @class UserMainData
+   * @param {object} data - The performance data
+   * @param {number} props.userId - Value of the userId 
+   * @param {string} props.userInfos.firstName - Value of the firstName
+   * @param {string} props.userInfos.lastName - Value of the lastName
+   * @param {number} props.userInfos.age - Value of the age
+   * @param {number} props.score - Value of the score
+   * @param {number} props.keyData.calorieCount - Value of the calorieCount
+   * @param {number} props.keyData.proteinCount - Value of the proteinCount
+   * @param {number} props.keyData.carbohydrateCount - Value of the carbohydrateCount
+   * @param {number} props.keyData.lipidCount - Value of the lipidCount
    */
   constructor(data) {
     this._userId = data.userId;
@@ -18,72 +26,90 @@ export default class UserMainData {
   }
 
   /**
-   * Get the code value.
-   * @return {number} The _code value
+   * Access of value of userId attribute.
+   * @method
+   * @memberof UserMainData
+   * @return {number} The value of userId attribute.
    */
   get userId() {
     return this._userId;
   }
   
   /**
-   * Get the code value.
-   * @return {string} The _code value
+   * Access of value of firstName attribute.
+   * @method
+   * @memberof UserMainData
+   * @return {string} The value of firstName attribute.
    */
   get firstName() {
     return this._firstName;
   }
   
   /**
-   * Get the code value.
-   * @return {string} The _code value
+   * Access of value of lastName attribute.
+   * @method
+   * @memberof UserMainData
+   * @return {string} The value of lastName attribute.
    */
   get lastName() {
     return this._lastName;
   }
   
   /**
-   * Get the code value.
-   * @return {number} The _code value
+   * Access of value of age attribute.
+   * @method
+   * @memberof UserMainData
+   * @return {number} The value of age attribute.
    */
   get age() {
     return this._age;
   }
   
   /**
-   * Get the code value.
-   * @return {number} The _code value
+   * Access of value of score attribute.
+   * @method
+   * @memberof UserMainData
+   * @return {number} The value of score attribute.
    */
   get score() {
     return this._score * 100;
   }
   
   /**
-   * Get the code value.
-   * @return {number} The _code value
+   * Access of value of calorieCount attribute.
+   * @method
+   * @memberof UserMainData
+   * @return {number} The value of calorieCount attribute.
    */
   get calorieCount() {
     return this._calorieCount;
   }
   
   /**
-   * Get the code value.
-   * @return {number} The _code value
+   * Access of value of proteinCount attribute.
+   * @method
+   * @memberof UserMainData
+   * @return {number} The value of proteinCount attribute.
    */
   get proteinCount() {
     return this._proteinCount;
   }
   
   /**
-   * Get the code value.
-   * @return {number} The _code value
+   * Access of value of carbohydrateCount attribute.
+   * @method
+   * @memberof UserMainData
+   * @return {number} The value of carbohydrateCount attribute.
    */
   get carbohydrateCount() {
     return this._carbohydrateCount;
   }
   
   /**
-   * Get the code value.
-   * @return {number} The _code value
+   * Access of value of lipidCount attribute.
+   * @method
+   * @memberof UserMainData
+   * @return {number} The value of lipidCount attribute.
    */
   get lipidCount() {
     return this._lipidCount;

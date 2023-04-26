@@ -4,15 +4,15 @@ import '../styles/DailyActivityBarChart.css'
 import PropTypes from 'prop-types'
 
 /**
- * Component for showing a recharts graph of daily user activity
- * 
- * @component
- * @example
- * const data = [{calories: number, day: number, kilogram: number}]
- * return (
- *   <DailyActivityBarChart data={data} />
- * )
- */
+  * A component that displays a chart of daily user activity.
+  *
+  * @param {object} props - The properties passed to the component.
+  * @param {Array<{ calories: number, day: number, sessionLength: number }>} props.data - The data to display in the chart.
+  * @param {number} props.data.calories - The calory amount of a session
+  * @param {number} props.data.day - A number corresponding to a day of the week (where 1 is Monday and 7 is Sunday).
+  * @param {number} props.data.sessionLength - The duration of a session.
+  * @returns {JSX.Element} The chart component.
+  */
 
 export default function DailyActivityBarChart ({ data }) {
   const getDailyData = (data) => {

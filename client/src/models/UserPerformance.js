@@ -1,12 +1,18 @@
 import DataPerformance from "./DataPerformance";
 
-
-/**
- * class UserPerformance - data modeling
- */
 export default class UserPerformance {
   /**
-   * @param {object} data - The data value.
+   * Class representing user performance data
+   * @class UserPerformance
+   * @param {object} data - The performance data
+   * @param {number} props.userId - Value of the userId 
+   * @param {string} props.kind["1"] - Value of the kind1
+   * @param {string} props.kind["2"] - Value of the kind2
+   * @param {string} props.kind["3"] - Value of the kind3
+   * @param {string} props.kind["4"] - Value of the kind4
+   * @param {string} props.kind["5"] - Value of the kind5
+   * @param {string} props.kind["6"] - Value of the kind6
+   * @param {Array} props.data - Value of the data
    */
   constructor(data) {
     this._userId = data.userId;
@@ -20,16 +26,20 @@ export default class UserPerformance {
   }
 
   /**
-   * Get the code value.
-   * @return {number} The _code value
+   * Access of value of userId attribute.
+   * @method
+   * @memberof UserPerformance
+   * @return {number} The value of userId attribute.
    */
   get userId() {
     return this._userId;
   }
 
   /**
-   * Get the brand value.
-   * @return {string} The _brand value
+   * Access of value of kind1 attribute.
+   * @method
+   * @memberof UserPerformance
+   * @return {string} The corresponding name of kind1 attribute.
    */
   get kind1() {
     return {
@@ -39,8 +49,10 @@ export default class UserPerformance {
   }
 
   /**
-   * Get the brand value.
-   * @return {string} The _brand value
+   * Access of value of kind2 attribute.
+   * @method
+   * @memberof UserPerformance
+   * @return {string} The corresponding name of kind2 attribute.
    */
   get kind2() {
     return {
@@ -50,8 +62,10 @@ export default class UserPerformance {
   }
 
   /**
-   * Get the brand value.
-   * @return {string} The _brand value
+   * Access of value of kind3 attribute.
+   * @method
+   * @memberof UserPerformance
+   * @return {string} The corresponding name of kind3 attribute.
    */
   get kind3() {
     return {
@@ -61,8 +75,10 @@ export default class UserPerformance {
   }
 
   /**
-   * Get the brand value.
-   * @return {string} The _brand value
+   * Access of value of kind4 attribute.
+   * @method
+   * @memberof UserPerformance
+   * @return {string} The corresponding name of kind4 attribute.
    */
   get kind4() {
     return {
@@ -72,8 +88,10 @@ export default class UserPerformance {
   }
 
   /**
-   * Get the brand value.
-   * @return {string} The _brand value
+   * Access of value of kind5 attribute.
+   * @method
+   * @memberof UserPerformance
+   * @return {string} The corresponding name of kind5 attribute.
    */
   get kind5() {
     return {
@@ -83,8 +101,10 @@ export default class UserPerformance {
   }
 
   /**
-   * Get the brand value.
-   * @return {string} The _brand value
+   * Access of value of kind6 attribute.
+   * @method
+   * @memberof UserPerformance
+   * @return {string} The corresponding name of kind6 attribute.
    */
   get kind6() {
     return {
@@ -94,8 +114,10 @@ export default class UserPerformance {
   }
 
   /**
-   * Get the brand value.
-   * @return {object} The _brand value
+   * Access of value of data attribute.
+   * @method
+   * @memberof UserPerformance
+   * @return {Array} The value of data attribute.
    */
   get data() {
     return this._data;

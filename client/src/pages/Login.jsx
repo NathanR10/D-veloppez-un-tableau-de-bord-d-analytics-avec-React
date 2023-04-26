@@ -2,6 +2,12 @@ import React from 'react'
 import '../styles/Login.css'
 import { Link } from 'react-router-dom'
 
+/**
+ * Login is a View of the project.
+ *
+ * @returns {JSX.Element}
+ */
+
 export default function Login () {
 
   return (

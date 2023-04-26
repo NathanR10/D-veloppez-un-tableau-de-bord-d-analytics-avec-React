@@ -1,10 +1,10 @@
-/**
- * class SessionAverage - data modeling
- */
 export default class SessionAverage {
   /**
-   * Recuperate SessionAverage data
-   * @param {object} data - The data value
+   * Class representing session average data
+   * @class SessionAverage
+   * @param {object} data - The performance data
+   * @param {number} props.day - Value of the day 
+   * @param {number} props.sessionLength - Value of the sessionLength
    */
   constructor(data) {
     this._day = data.day;
@@ -12,8 +12,10 @@ export default class SessionAverage {
   }
 
   /**
-   * Get the start value.
-   * @return {number} The _start value.
+   * Access of value of day attribute.
+   * @method
+   * @memberof SessionAverage
+   * @return {number} The day name of the attribute.
    */
   get day() {
     let day = this._day;
@@ -46,8 +48,10 @@ export default class SessionAverage {
   }
 
   /**
-   * Get the end value.
-   * @return {number} The _end value.
+   * Access of value of sessionLength attribute.
+   * @method
+   * @memberof SessionAverage
+   * @return {number} The value of sessionLength attribute.
    */
   get sessionLength() {
     return this._sessionLength;

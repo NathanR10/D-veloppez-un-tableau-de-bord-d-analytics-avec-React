@@ -10,11 +10,11 @@ const REACT_APP_API_MOCKING = process.env.REACT_APP_API_MOCKING === "true";
 // eslint-disable-next-line no-undef
 const REACT_APP_API_ROUTE = process.env.REACT_APP_API_ROUTE;
 
-/** TODO
- * collect data of targeted user, using userId
- * if REACT_APP_API_MOCKING is true, it return mocked data
- * else it return API server response
- * Inspect UserMainData function for more details
+/**
+ * Get normalized user main data.
+ * @function getUserMainData
+ * @param {number} userId - Id of a user
+ * @returns {object}
  */
 const getUserMainData = async (userId) => {
   if (REACT_APP_API_MOCKING) {
@@ -30,10 +30,10 @@ const getUserMainData = async (userId) => {
 }
 
 /**
- * collect data of targeted user, using userId
- * if REACT_APP_API_MOCKING is true, it return mocked data
- * else it return API server response
- * Inspect UserActivity function for more details
+ * Get normalized user activity data.
+ * @function getUserActivity
+ * @param {number} userId - Id of a user
+ * @returns {object}
  */
 const getUserActivity = async (userId) => {
   if (REACT_APP_API_MOCKING) {
@@ -49,10 +49,10 @@ const getUserActivity = async (userId) => {
 }
 
 /**
- * collect data of targeted user, using userId
- * if REACT_APP_API_MOCKING is true, it return mocked data
- * else it return API server response
- * Inspect UserAverageSessions function for more details
+ * Get normalized user average sessions data.
+ * @function getUserAverageSessions
+ * @param {number} userId - Id of a user
+ * @returns {object}
  */
 const getUserAverageSessions = async (userId) => {
   if (REACT_APP_API_MOCKING) {
@@ -68,10 +68,10 @@ const getUserAverageSessions = async (userId) => {
 }
 
 /**
- * collect data of targeted user, using userId
- * if REACT_APP_API_MOCKING is true, it return mocked data
- * else it return API server response
- * Inspect UserPerformance function for more details
+ * Get normalized user performance data.
+ * @function getUserPerformance
+ * @param {number} userId - Id of a user
+ * @returns {object}
  */
 const getUserPerformance = async (userId) => {
   if (REACT_APP_API_MOCKING) {

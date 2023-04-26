@@ -1,0 +1,26 @@
+{
+  "source": {
+    "include": [
+      "src/"
+    ],
+    "includePattern": ".js(x)?$",
+    "excludePattern": "(^|\\/|\\\\)node_modules(\\/|\\\\)"
+  },
+  "plugins": [
+    "plugins/markdown",
+    "node_modules/jsdoc-babel"
+  ],
+  "babel": {
+    "extensions": [
+      "jsx"
+    ]
+  },
+  "templates": {
+    "cleverlinks": true,
+    "monospacelinks": true
+  },
+  "opts": {
+    "recurse": true,
+    "destination": "./docs/"
+  }
+}

@@ -11,15 +11,9 @@ import Login from '../pages/Login'
 import '../styles/App.css'
 
 /**
- * Main router component for the app.
- * Responsible for handling routing using React Router.
- * Renders different pages based on the current URL path.
- * 
- * @component
- * @example
- * return (
- *  <AppRouter />
- * )
+ * AppRouter is a React component that defines the routing configuration of the project.
+ *
+ * @returns {JSX.Element}
  */
 
 function AppRouter () {

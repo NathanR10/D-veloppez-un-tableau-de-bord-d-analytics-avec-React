@@ -4,15 +4,14 @@ import '../styles/ScorePieChart.css'
 import PropTypes from 'prop-types'
 
 /**
- * Component for showing a recharts graph of performances poles of user
- * 
- * @component
- * @example
- * const data = [{name: string, value: number(min: 0, max: 100)}]
- * return (
- *   <ScorePieChart data={data} />
- * )
- */
+  * A component that displays a chart of user progress.
+  *
+  * @param {object} props - The properties passed to the component.
+  * @param {Array<{ name: string, day: number, value: number }>} props.data - The data to display in the chart.
+  * @param {number} props.data.name - Displayed name of the chart
+  * @param {number} props.data.value - A number corresponding to the progress of user in percent (min 0, max 100).
+  * @returns {JSX.Element} The chart component.
+  */
 
 export default function ScorePieChart ({ data }) {
   const progress = data[0].value

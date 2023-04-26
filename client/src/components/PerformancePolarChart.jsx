@@ -4,15 +4,21 @@ import '../styles/PerformancePolarChart.css'
 import PropTypes from 'prop-types'
 
 /**
- * Component for showing a recharts graph of performances poles of user
- * 
- * @component
- * @example
- * const data = [{kind1: {A: number, subject: string}}, {kind2: {A: number, subject: string}}]
- * return (
- *   <PerformancePolarChart data={data} />
- * )
- */
+ * A component that displays a chart of user performance based on the provided data.
+ *
+ * @param {object} props - The properties passed to the component.
+ * @param {Array<{
+*   kind1: { A: number, subject: string },
+*   kind2: { A: number, subject: string },
+*   kind3: { A: number, subject: string },
+*   kind4: { A: number, subject: string },
+*   kind5: { A: number, subject: string }
+* }>} props.data - The data to display in the chart.
+* @param {number} props.data.kind1.A - A is the dataset name in the chart, we only use A before we need one dataset.
+* @param {string} props.data.kind1.subject - The name of the pole, corresponding to A value.
+* @returns {JSX.Element} The chart component.
+*/
+
 
 export default function PerformancePolarChart ({ data }) {
   const formatedData = [

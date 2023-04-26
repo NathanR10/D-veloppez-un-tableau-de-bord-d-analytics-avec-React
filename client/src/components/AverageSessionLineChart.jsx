@@ -4,14 +4,14 @@ import '../styles/AverageSessionLineChart.css'
 import PropTypes from 'prop-types'
 
 /**
- * Component for showing a recharts graph of average sessions length of user
- * 
- * @component
- * @example
- * @param {array} data - Session's data
- * @param {number} data[].day - Session's day
- * @param {number} data[].sessionLength - Session's length
- */
+  * A component that displays a chart of the average session duration based on the provided data.
+  *
+  * @param {object} props - The properties passed to the component.
+  * @param {Array<{ day: number, sessionLength: number }>} props.data - The data to display in the chart.
+  * @param {number} props.data.day - The seven days of the week (from Monday to Sunday).
+  * @param {number} props.data.sessionLength - The duration of a session.
+  * @returns {JSX.Element} The chart component.
+  */
 
 export default function AverageSessionLineChart ({ data }) {
   const ContentBg = ({ points, width }) => {

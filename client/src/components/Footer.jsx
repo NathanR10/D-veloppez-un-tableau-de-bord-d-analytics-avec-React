@@ -4,12 +4,8 @@ import Icon from './Icon'
 
 /**
  * Footer component for the app.
- * 
- * @component
- * @example
- * return (
- *  <Footer />
- * )
+ *
+ * @returns {JSX.Element}
  */
 
 export default function Footer () {

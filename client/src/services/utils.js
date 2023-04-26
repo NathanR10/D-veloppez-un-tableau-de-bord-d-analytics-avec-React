@@ -1,3 +1,10 @@
+/**
+ * Insert a comma every 3 numbers.
+ * @function formatNumber
+ * @param {number} number - Number to format
+ * @returns {number}
+ */
+
 export default function formatNumber(number) {
   const num = number.toString()
   if (num.length <= 3) {

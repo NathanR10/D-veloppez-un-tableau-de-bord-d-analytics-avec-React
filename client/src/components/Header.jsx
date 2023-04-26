@@ -3,14 +3,9 @@ import { Link } from 'react-router-dom'
 import '../styles/Header.css'
 
 /**
- * Header component for the app.
- * Contain all link to bind pages
- * 
- * @component
- * @example
- * return (
- *  <Header />
- * )
+ * Header component for the app, containing the navigation links.
+ *
+ * @returns {JSX.Element}
  */
 
 export default function Header () {

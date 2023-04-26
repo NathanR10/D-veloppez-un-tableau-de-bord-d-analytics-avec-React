@@ -28,3 +28,13 @@ cd server && npm run start
 ```
 
 > You can now access the app at [http://localhost:3000/](http://localhost:3000/)
+
+✦. **Access JSdocs**
+
+> In a terminal, place yourself at the root of the project then run the following command :
+
+```
+cd client && npm run doc
+```
+
+> You'll get a new folder located in _**/client/docs**_, inside of it open the _**index.html**_ in your browser

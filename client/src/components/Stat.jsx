@@ -3,14 +3,16 @@ import '../styles/Stat.css'
 import PropTypes from 'prop-types'
 
 /**
- * Component for showing brut stat of user.
- * 
- * @component
- * @example
- * return (
- *  <Stat icon={string} color={string} value={number} label={string} type={string} />
- * )
- */
+  * Component for showing flat stat of user.
+  *
+  * @param {object} props - The properties passed to the component.
+  * @param {string} props.icon - Url of an image.
+  * @param {string} props.color - Color of the background of icon, (hexa || rgb || rgba || HTML color names).
+  * @param {number} props.value - Displayed stat.
+  * @param {string} props.label - Name of the displayed stat.
+  * @param {string} props.type - Measurement symbols corresponding to the label.
+  * @returns {JSX.Element} The chart component.
+  */
 
 export default function Stat ({ icon, color, value, label, type }) {
   return (

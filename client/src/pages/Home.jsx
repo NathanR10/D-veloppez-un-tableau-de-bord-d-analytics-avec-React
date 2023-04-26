@@ -9,6 +9,12 @@ import PerformancePolarChart from '../components/PerformancePolarChart'
 import ScorePieChart from '../components/ScorePieChart'
 import { useParams } from 'react-router-dom'
 
+/**
+ * Home is a View of the project.
+ *
+ * @returns {JSX.Element}
+ */
+
 export default function Home () {
   const [userMainData, setUserMainData] = useState({
     firstName: '...',

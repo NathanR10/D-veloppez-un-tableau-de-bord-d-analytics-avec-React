@@ -1,10 +1,10 @@
-/**
- * class DataPerformance - data modeling
- */
 export default class DataPerformance {
   /**
-   * Recuperate DataPerformance data
-   * @param {object} data - The data value
+   * Class representing performance data
+   * @class DataPerformance
+   * @param {object} data - The performance data
+   * @param {number} props.kind - Id corresponding of kind name
+   * @param {number} props.value - Value of the kind
    */
   constructor(data) {
     this._value = data.value;
@@ -12,16 +12,20 @@ export default class DataPerformance {
   }
 
   /**
-   * Get the end value.
-   * @return {number} The _end value.
+   * Access of value of value attribute.
+   * @method
+   * @memberof DataPerformance
+   * @return {number} The value of value attribute.
    */
   get value() {
     return this._value;
   }
 
   /**
-   * Get the kilometers value.
-   * @return {number} The _kilometers value.
+   * Access of value of kind attribute.
+   * @method
+   * @memberof DataPerformance
+   * @return {number} The value of kind attribute.
    */
   get kind() {
     return this._kind;

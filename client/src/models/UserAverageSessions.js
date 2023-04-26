@@ -1,11 +1,12 @@
 import SessionAverage from "./SessionAverage";
 
-/**
- * class UserAverageSessions - data modeling
- */
 export default class UserAverageSessions {
   /**
-   * @param {object} data - The data value.
+   * Class representing user average sessions data
+   * @class UserAverageSessions
+   * @param {object} data - The performance data
+   * @param {number} props.userId - Value of the userId 
+   * @param {Array} props.sessions - Value of sessions
    */
   constructor(data) {
     this._userId = data.userId;
@@ -13,16 +14,20 @@ export default class UserAverageSessions {
   }
 
   /**
-   * Get the code value.
-   * @return {number} The _code value
+   * Access of value of userId attribute.
+   * @method
+   * @memberof UserAverageSessions
+   * @return {number} The value of userId attribute.
    */
   get userId() {
     return this._userId;
   }
 
   /**
-   * Get the brand value.
-   * @return {object} The _brand value
+   * Access of value of sessions attribute.
+   * @method
+   * @memberof UserAverageSessions
+   * @return {Array} The value of sessions attribute.
    */
   get sessions() {
     return this._sessions;
